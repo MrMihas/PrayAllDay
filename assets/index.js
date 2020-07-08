@@ -11,11 +11,11 @@ function dotsActive(e){
 		}
 		e.target.classList.add('active');
 		console.log(e.target.getAttribute('data-attr'));
-		test(e.target.getAttribute('data-attr'));
+		sliderActive(e.target.getAttribute('data-attr'));
 	} 
 }
 
-function test(e){
+function sliderActive(e){
 	let slider = document.querySelectorAll(".slider-item");
 	for (let i = 0; i < slider.length; i++) {
 		if(e == slider[i].getAttribute('data-attr')){
