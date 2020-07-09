@@ -4,46 +4,45 @@ dots.addEventListener('click', dotsActive);
 
 
 function dotsActive(e){
+		pausePlayIcon();
 	if (e.target.classList.contains('dots-item')) {
+
 		const activeClass = this.querySelector(".active");
 		if(activeClass){
 			activeClass.classList.remove("active");
+			activeClass.classList.remove("play");
+			activeClass.removeAttribute("id");
+
 		}
 		e.target.classList.add('active');
-		console.log(e.target.getAttribute('data-attr'));
-		sliderActive(e.target.getAttribute('data-attr'));
+		e.target.setAttribute('id','play');
+		slideActive(e.target.getAttribute('data-attr'));
+		
 	} 
 }
 
-function sliderActive(e){
-	let slider = document.querySelectorAll(".slider-item");
-	for (let i = 0; i < slider.length; i++) {
-		if(e == slider[i].getAttribute('data-attr')){
-			slider[i].classList.add("active");
+function slideActive(e){
+	let slides = document.querySelectorAll(".slider-item");
+	for (let i = 0; i < slides.length; i++) {
+		if(e == slides[i].getAttribute('data-attr')){
+			slides[i].classList.add("active");
 		} else{
-			slider[i].classList.remove("active");
+			slides[i].classList.remove("active");
 		}
 	}
 	
 }
 
 
-// function slider(){
+function pausePlayIcon(){
+	let dots = document.querySelectorAll(".dots-item");
+for (let k = 0; k < dots.length; k++) {
+	let checkedDots = dots[k];
+	if(checkedDots.hasAttribute('id')){
+		checkedDots.onclick = function(){
+			checkedDots.classList.toggle('play');
+		}
+	}
+}
 
-// 	let slideItem = document.querySelectorAll(".slider-item");
-// 	for (let i = 0; i < slideItem.length; i++) {
-// 		console.log(slideItem.length);
-// 	}
-// }
-
-// let dotsLink = document.querySelectorAll('.dots-link');
-
-// dotsLink.forEach((e)=>{
-// 	e.addEventListener('click', function(){
-// 		let bgWrapper = document.querySelector(".slider-item span");
-// 		bgWrapper.classList.add('active');
-
-// 		let sliderItem = 
-
-// 	})
-// })
+}

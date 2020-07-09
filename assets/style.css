@@ -306,6 +306,15 @@ body {
 	display: block;
 }
 
+.slider-dots .dots-item.active.play a{
+	background: url(../images/iconsSVG/pause.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:  16px 16px;
+	height: 100%;
+	display: block;
+}
+
 .slider-dots .dots-item .dots-link{
 	
 }
