@@ -284,12 +284,21 @@ body {
   border-radius: 100%;
   margin-top: 10px;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.slider-dots .dots-item.active {
-  width: 50px;
-  height: 50px;
+.slider-dots .dots-item.active:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  display: block;
+  background: #3594ec;
+  border-radius: 100%;
 }
-.slider-dots .dots-item.active a {
+/* .slider-dots .dots-item.active a {
   background: url(../images/iconsSVG/play.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -306,9 +315,7 @@ body {
   height: 100%;
   display: block;
 }
-
-.slider-dots .dots-item .dots-link {
-}
+ */
 
 .modal-wrapper {
   width: 100%;

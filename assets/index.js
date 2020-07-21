@@ -12,12 +12,12 @@ function dotsActive(e) {
 		const activeClass = this.querySelector(".active");
 		if (activeClass) {
 			activeClass.classList.remove("active");
-			activeClass.classList.remove("play");
-			activeClass.removeAttribute("id");
+			// activeClass.classList.remove("play");
+			// activeClass.removeAttribute("id");
 
 		}
 		e.target.classList.add('active');
-		e.target.setAttribute('id', 'play');
+		// e.target.setAttribute('id', 'play');
 		slideActive(e.target.getAttribute('data-attr'));
 
 	}
@@ -36,20 +36,20 @@ function slideActive(e) {
 }
 
 
-function pausePlayIcon() {
-	let dots = document.querySelectorAll(".dots-item");
-	for (let k = 0; k < dots.length; k++) {
-		let checkedDots = dots[k];
-		if (checkedDots.hasAttribute('id')) {
-			checkedDots.onclick = function () {
-				checkedDots.classList.toggle('play');
-				checkedDots.removeAttribute('id');
-				checkedDots.setAttribute('id', 'play');
-			}
-		}
-	}
+// function pausePlayIcon() {
+// 	let dots = document.querySelectorAll(".dots-item");
+// 	for (let k = 0; k < dots.length; k++) {
+// 		let checkedDots = dots[k];
+// 		if (checkedDots.hasAttribute('id')) {
+// 			checkedDots.onclick = function () {
+// 				checkedDots.classList.toggle('play');
+// 				checkedDots.removeAttribute('id');
+// 				checkedDots.setAttribute('id', 'play');
+// 			}
+// 		}
+// 	}
 
-}
+// }
 
 
 // document.querySelector('.play').onclick = play;
