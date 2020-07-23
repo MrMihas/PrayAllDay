@@ -6,7 +6,7 @@ dots.addEventListener('click', dotsActive);
 
 
 function dotsActive(e) {
-	pausePlayIcon();
+	//pausePlayIcon();
 	if (e.target.classList.contains('dots-item')) {
 
 		const activeClass = this.querySelector(".active");
