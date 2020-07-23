@@ -361,6 +361,7 @@ body {
   .hero {
     display: flex;
     flex-direction: column;
+    flex-wrap:wrap;
   }
 
   .hero__left {
@@ -389,6 +390,13 @@ body {
     justify-content: center;
   }
 }
+
+@media (min-width: 600px) {
+  .hero {
+    flex-direction: row;
+  }
+}
+
 
 @media (min-width: 768px) {
   .header__navigation {
